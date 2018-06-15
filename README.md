@@ -10,7 +10,7 @@ Well, I thought it would be cool.  I was right.
 
 ## What
 
-This docker image will run Xfce on Fedora:latest and start a VNC server so you can use your new workstation.
+This docker image will run Xfce on fedora:latest and start a VNC server so you can use your new workstation.
 
 ## How
 
@@ -23,6 +23,12 @@ To build:
 To run:
 
 `docker run --rm -d -v mybox:/home/boxer -p 5901:5901 home-in-a-box`
+
+To connect:
+
+`vncviewer -AutoSelect 0 -QualityLevel 9 -CompressLevel 0 127.0.0.1:5901`
+
+The default password for `boxer` is `password1`.
 
 To customize:
 
